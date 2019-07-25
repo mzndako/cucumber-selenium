@@ -10,6 +10,15 @@ image: node:latest
 # This folder is cached between builds
 # http://docs.gitlab.com/ce/ci/yaml/README.html#cache
 test_server:
+  before_script:
+    - apt-get update
+    - apt-get --yes --force-yes install google-chrome-stable
+    - wget https://chromedriver.storage.googleapis.com/75.0.3770.140/chromedriver_linux64.zip
+    - unzip chromedriver_linux64.zip
+    - sudo mv chromedriver /usr/bin/chromedriver
+    - sudo chown root:root /usr/bin/chromedriver
+    - sudo chmod +x /usr/bin/chromedriver
+
   script:
    - npm install
    - npm run test
