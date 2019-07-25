@@ -10,13 +10,6 @@ image: selenium/node-chrome
 # This folder is cached between builds
 # http://docs.gitlab.com/ce/ci/yaml/README.html#cache
 test_server:
-  before_script:
-    - apt-get update
-    - wget https://chromedriver.storage.googleapis.com/75.0.3770.140/chromedriver_linux64.zip
-    - unzip chromedriver_linux64.zip
-    - mv chromedriver /usr/bin/chromedriver
-    - chmod +x /usr/bin/chromedriver
-
   script:
    - npm install
   #  - npm install -g chromedriver
