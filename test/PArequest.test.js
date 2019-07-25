@@ -16,18 +16,18 @@ describe('PA Request automatic testing', function () {
   }
 
   beforeEach(async () => {
-    page = new Page()
+    page = await new Page()
     driver = page.driver
   })
 
-  afterEach(async () => driver.quit())
+  afterEach(async () => await driver.quit())
 
   it('I can click on the PA Request link from the login page', async () => {
     await page.visit();
 
     const link = await page.querySelector("a[href*='pa-request']");
     await link.click();
-    
+
     await page.querySelector(".login-block:nth-of-type(1) input");
   })
 
