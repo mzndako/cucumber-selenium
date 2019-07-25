@@ -24,15 +24,34 @@ describe('PA Request automatic testing', function () {
 
   it('I can click on the PA Request link from the login page', async () => {
     await page.visit();
+
     const link = await page.querySelector("a[href*='pa-request']");
     await link.click();
+    
     await page.querySelector(".login-block:nth-of-type(1) input");
   })
 
-  it('Select Public Trade Request and fill all input', async () => {
+  it('login to PA Request selecting \'Public Trade Request\', fill all fields and submit', async () => {
     await page.visitPArequest()
     await page.loginToPArequest(login.username, login.password, login.options.first)
     await page.fillAndSubmitPublicTradeRequest();
+
+    const response = await page.querySelector('#pa-requests > .text-danger');
+    const result = await response.getText();
+
+    expect(result).toEqual(expect.not.stringContaining('You have not selected an account number'));
+  })
+  
+
+  it('login to PA Request selecting \'Discretional Account Request\', fill all fields and submit', async () => {
+    await page.visitPArequest()
+    await page.loginToPArequest(login.username, login.password, login.options.second)
+    await page.fillAndSubmitDAR();
+
+    const response = await page.querySelector('.modal-body h4');
+    const result = await response.getText();
+
+    expect(result).toEqual(expect.not.stringContaining('Cannt read property \'0\' of undefined'));
   })
   
 })
