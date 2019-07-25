@@ -19,4 +19,6 @@ test_server:
 
   script:
    - npm install
+   - npm install -g chromedriver
+   - npm install -g geckodriver
    - npm run test
