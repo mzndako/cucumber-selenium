@@ -12,7 +12,6 @@ image: node:latest
 test_server:
   before_script:
     - apt-get update
-    - apt-get --yes --force-yes install google-chrome-stable
     - wget https://chromedriver.storage.googleapis.com/75.0.3770.140/chromedriver_linux64.zip
     - unzip chromedriver_linux64.zip
     - sudo mv chromedriver /usr/bin/chromedriver
