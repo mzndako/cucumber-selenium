@@ -8,3 +8,6 @@ cd compliancetooltestharness
 npm install
 npm run test
 ```
+
+## Dependencies
+- Google Chrome

@@ -4,7 +4,7 @@
   "description": "This project shows how to drive your selenium tests with Jest.",
   "main": "test/loginPage.test.js",
   "scripts": {
-    "test": "jest"
+    "test": "jest --verbose"
   },
   "author": "Mathieu Schmidt",
   "license": "ISC",
