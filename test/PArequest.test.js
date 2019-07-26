@@ -15,12 +15,12 @@ describe('PA Request automatic testing', function () {
     } 
   }
 
-  beforeEach(async () => {
+  beforeAll(async () => {
     page = await new Page()
     driver = page.driver
   })
 
-  afterEach(async () => await driver.quit())
+  afterAll(async () => await driver.quit())
 
   it('I can click on the PA Request link from the login page', async () => {
     await page.visit();
@@ -51,7 +51,7 @@ describe('PA Request automatic testing', function () {
     const response = await page.querySelector('.modal-body h4');
     const result = await response.getText();
 
-    expect(result).toEqual(expect.not.stringContaining('Cannt read property \'0\' of undefined'));
+    expect(result).toEqual(expect.not.stringContaining('Cannot read property \'0\' of undefined'));
   })
   
 })
