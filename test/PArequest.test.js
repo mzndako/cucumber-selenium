@@ -48,7 +48,8 @@ describe('PA Request automatic testing', function () {
     await page.loginToPArequest(login.username, login.password, login.options.second)
     await page.fillAndSubmitDAR();
 
-    const response = await page.querySelector('.modal-body h4');
+    await page.querySelector('#main-modal'); // wait for the modal to be visile
+    const response = await page.querySelector('.modal-body h4', false);
     const result = await response.getText();
 
     expect(result).toEqual(expect.not.stringContaining('Cannot read property \'0\' of undefined'));
