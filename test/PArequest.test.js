@@ -1,5 +1,5 @@
 
-const Page = require('../lib/PArequest')
+const Page = require('../features/supports/pages')
 
 jasmine.DEFAULT_TIMEOUT_INTERVAL = 1000 * 60 * 5
 
@@ -15,12 +15,12 @@ describe('PA Request automatic testing', function () {
     } 
   }
 
-  beforeAll(async () => {
+  beforeEach(async () => {
     page = await new Page()
     driver = page.driver
   })
 
-  afterAll(async () => await driver.quit())
+  afterEach(async () => await driver.quit())
 
   it('I can click on the PA Request link from the login page', async () => {
     await page.visit();
