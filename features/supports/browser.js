@@ -136,7 +136,7 @@ var Browser = function () {
   }
 
   this.isXpath = function(query) {
-    return query.match(/(^\/\/|\(\/\/)/)
+    return query ? query.match(/(^\/\/|\(\/\/)/) : false
   }
 }
 

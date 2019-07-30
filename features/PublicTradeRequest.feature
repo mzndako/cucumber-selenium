@@ -3,14 +3,14 @@ Feature: Testing "Public Trade Request" form
   I want to be able to login with my details to the PA Request page
   So that I fill the required form and submit a Request
 
-  Scenario: User can click on PA Request link from the Login Page
+  Scenario: "PA Request Link" => User can click on PA Request link from the Login Page
     Given No current login user
     When I visit "/login"
     Then I should see "PA Request Button"
     When I clicked on it
     Then I should see form like "PA Request"
 
-  Scenario: User enters wrong email and password
+  Scenario: "Public Trade Request" => User enters wrong email and password
     Given No current login user
     When I visit "/noauth#/pa-requests"
     And I fill in "email" with "dummyuser1234@test.com"
@@ -20,7 +20,7 @@ Feature: Testing "Public Trade Request" form
     Then I should see text like "Unfortunately we are unable to verify your name or password"
 
 
-  Scenario: User enters correct email and password
+  Scenario: "Public Trade Request" => User enters correct email and password
     Given No current login user
     When I visit "/noauth#/pa-requests"
     And I fill in "email" with "mzndako@gmail.com"
@@ -30,7 +30,7 @@ Feature: Testing "Public Trade Request" form
     Then I should see "Public Trade Request Form"
 
 
-  Scenario: User login to "Public Trade Request" and submit without completing the form
+  Scenario: "Public Trade Request" => User login to "Public Trade Request" and submit without completing the form
     Given No current login user
     When I visit '/noauth#/pa-requests'
     And I am login with "mzndako@gmail.com" as email "Ndako1" as password "Public Trade Request" as Type of Request
