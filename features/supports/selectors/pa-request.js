@@ -13,6 +13,8 @@ module.exports = {
   'Exchange': '//label[contains(.,"Exchange")]/../input',
   'Quantity': '//label[contains(.,"Quantity")]/../input',
   'Investment Class': '//label[contains(.,"Investment Class")]/../div',
+  'Account Number': '#discretionary-account div:nth-of-type(3) input',
+  'Name of Broker / Manager': '#discretionary-account div:nth-of-type(4) input',
   email: '.login-block:nth-of-type(1) input',
   password: '.login-block:nth-of-type(2) input',
   nameOfBroker: '.trade-two-column.space-between:nth-of-type(2) div:nth-child(1) input',

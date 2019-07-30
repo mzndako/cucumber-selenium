@@ -1,14 +1,17 @@
 const selector = require('../selectors/pa-request')
 
-module.exports = {
+const pa_request = {
   go: async function (page) {
-    await this.visit(selector[page])
+    await this.visit(page.indexOf('/') > -1 ? page : selector[page])
   },
   clickRequestLink: async function() {
     await this.click(selector['PA Request Button'])
   },
   click: async function(location) {
     await this.click(selector[location])
+  },
+  clickButtonXpath: async function(location) {
+    await this.click(`//button[contains(text(), '${location}')]`)
   },
   visible: async function(location) {
     await this.querySelector(selector[location])
@@ -22,11 +25,10 @@ module.exports = {
   textVisible: async function(text) {
     await this.queryXpath(`//*[contains(text(),'${text}')]`)
   },
-  login: async function(typeOfRequest, email, password) {
-    await this.visit(selector['PA Request Link'])
+  login: async function(email, password, requestType) {
     await this.queryAndFill(selector.email, email)
     await this.queryAndFill(selector.password, password)
-    await this.selectDropdownValue(selector['Type of Request'], typeOfRequest)
+    await this.selectDropdownValue(selector['Type of Request'], requestType)
     await this.click(selector['PA Submit Button'])
   },
   selectResponseDropdown: async function(type, location, select) {
@@ -46,3 +48,5 @@ module.exports = {
   }
 
 }
+
+module.exports = pa_request

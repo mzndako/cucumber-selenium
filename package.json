@@ -10,12 +10,14 @@
   "license": "ISC",
   "devDependencies": {
     "chromedriver": "^2.46.0",
+    "cucumber": "^5.1.0",
+    "cucumber-html-reporter": "^5.0.0",
     "geckodriver": "^1.16.0",
     "jest": "^24.5.0",
-    "selenium-webdriver": "3.x",
-    "cucumber": "^5.1.0"
+    "selenium-webdriver": "3.x"
   },
   "dependencies": {
+    "cucumber-pretty": "^1.5.2",
     "faker": "^4.1.0"
   }
 }
