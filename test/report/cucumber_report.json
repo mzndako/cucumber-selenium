@@ -1,0 +1,376 @@
+[
+  {
+    "description": "  As a user\n  I want to be able to login with my details to the PA Request page\n  So that I fill the required form and submit a Request",
+    "keyword": "Feature",
+    "name": "Testing PA Request using \"Public Trade Request\" form",
+    "line": 1,
+    "id": "testing-pa-request-using-\"public-trade-request\"-form",
+    "tags": [],
+    "uri": "features\\pa-request.feature",
+    "elements": [
+      {
+        "id": "testing-pa-request-using-\"public-trade-request\"-form;user-can-click-on-pa-request-link-from-the-login-page",
+        "keyword": "Scenario",
+        "line": 6,
+        "name": "User can click on PA Request link from the Login Page",
+        "tags": [],
+        "type": "scenario",
+        "steps": [
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 7,
+            "name": "No current login user",
+            "match": {
+              "location": "features\\step-definitions\\pa-request-step.js:5"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 8,
+            "name": "I access the \"Login Page\"",
+            "match": {
+              "location": "features\\step-definitions\\pa-request-step.js:9"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 9448000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 9,
+            "name": "I should see \"PA Request Button\"",
+            "match": {
+              "location": "features\\step-definitions\\pa-request-step.js:13"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 614000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 10,
+            "name": "I clicked on it",
+            "match": {
+              "location": "features\\step-definitions\\pa-request-step.js:17"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 10390000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 11,
+            "name": "I should see \"PA Request Page\"",
+            "match": {
+              "location": "features\\step-definitions\\pa-request-step.js:13"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 196000000
+            }
+          }
+        ]
+      },
+      {
+        "id": "testing-pa-request-using-\"public-trade-request\"-form;user-enters-wrong-email-and-password",
+        "keyword": "Scenario",
+        "line": 13,
+        "name": "User enters wrong email and password",
+        "tags": [],
+        "type": "scenario",
+        "steps": [
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 14,
+            "name": "No current login user",
+            "match": {
+              "location": "features\\step-definitions\\pa-request-step.js:5"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 15,
+            "name": "I open \"PA Request Link\"",
+            "match": {
+              "location": "features\\step-definitions\\pa-request-step.js:11"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 10807000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 16,
+            "name": "I fill in \"email\" with \"dummyuser1234@test.com\"",
+            "match": {
+              "location": "features\\step-definitions\\pa-request-step.js:23"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 261000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 17,
+            "name": "I fill in \"password\" with \"test\"",
+            "match": {
+              "location": "features\\step-definitions\\pa-request-step.js:23"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 121000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 18,
+            "name": "I select \"Public Trade Request\" for \"Type of Request\"",
+            "match": {
+              "location": "features\\step-definitions\\pa-request-step.js:31"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 374000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 19,
+            "name": "I click on \"PA Submit Button\"",
+            "match": {
+              "location": "features\\step-definitions\\pa-request-step.js:25"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 150000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 20,
+            "name": "I should see text like \"Unfortunately we are unable to verify your name or password\"",
+            "match": {
+              "location": "features\\step-definitions\\pa-request-step.js:33"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1379000000
+            }
+          }
+        ]
+      },
+      {
+        "id": "testing-pa-request-using-\"public-trade-request\"-form;user-enters-correct-email-and-password",
+        "keyword": "Scenario",
+        "line": 23,
+        "name": "User enters correct email and password",
+        "tags": [],
+        "type": "scenario",
+        "steps": [
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 24,
+            "name": "No current login user",
+            "match": {
+              "location": "features\\step-definitions\\pa-request-step.js:5"
+            },
+            "result": {
+              "status": "passed"
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 25,
+            "name": "I open \"PA Request Link\"",
+            "match": {
+              "location": "features\\step-definitions\\pa-request-step.js:11"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 18388000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 26,
+            "name": "I fill in \"email\" with \"mzndako@gmail.com\"",
+            "match": {
+              "location": "features\\step-definitions\\pa-request-step.js:23"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 218000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 27,
+            "name": "I fill in \"password\" with \"Ndako1\"",
+            "match": {
+              "location": "features\\step-definitions\\pa-request-step.js:23"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 206000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 28,
+            "name": "I select \"Public Trade Request\" for \"Type of Request\"",
+            "match": {
+              "location": "features\\step-definitions\\pa-request-step.js:31"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 348000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 29,
+            "name": "I click on \"PA Submit Button\"",
+            "match": {
+              "location": "features\\step-definitions\\pa-request-step.js:25"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 224000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 30,
+            "name": "I should see \"Public Tradee Request Form\"",
+            "match": {
+              "location": "features\\step-definitions\\pa-request-step.js:13"
+            },
+            "result": {
+              "status": "failed",
+              "duration": 4000000,
+              "error_message": "TypeError: Cannot read property 'match' of undefined\n    at Browser.isXpath (C:\\xampp\\htdocs\\upworks\\jest-selenium\\features\\supports\\browser.js:139:18)\n    at Browser.querySelector (C:\\xampp\\htdocs\\upworks\\jest-selenium\\features\\supports\\browser.js:80:30)\n    at Browser.visible (C:\\xampp\\htdocs\\upworks\\jest-selenium\\features\\supports\\pages\\pa-request.js:14:16)"
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "description": "  As a user\n  I want to be able to login with my details to the PA Request page\n  So that I fill the required form and submit a Request",
+    "keyword": "Feature",
+    "name": "Testing PA Request using \"Account Request\" form",
+    "line": 1,
+    "id": "testing-pa-request-using-\"account-request\"-form",
+    "tags": [],
+    "uri": "features\\pa-request1.feature",
+    "elements": [
+      {
+        "id": "testing-pa-request-using-\"account-request\"-form;user-login-to-public-trade-request-and-submit-without-completing-the-form",
+        "keyword": "Scenario",
+        "line": 6,
+        "name": "User login to Public Trade Request and submit without completing the form",
+        "tags": [],
+        "type": "scenario",
+        "steps": [
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 7,
+            "name": "I am logged into \"Public Trade Request\" with email as \"mzndako@gmail.com\" and password as \"Ndako1\"",
+            "match": {
+              "location": "features\\step-definitions\\pa-request-step.js:35"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 17026000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 8,
+            "name": "I click on \"Send Request\"",
+            "match": {
+              "location": "features\\step-definitions\\pa-request-step.js:25"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1605000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 9,
+            "name": "I should see an error message \"Please fill in security.\"",
+            "match": {
+              "location": "features\\step-definitions\\pa-request-step.js:15"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 137000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 10,
+            "name": "I type in \"b\" for \"Name of Security\" and I select the \"first\" option",
+            "match": {
+              "location": "features\\step-definitions\\pa-request-step.js:37"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 7260000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 11,
+            "name": "I reset the form",
+            "match": {
+              "location": "features\\step-definitions\\pa-request-step.js:27"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1000000
+            }
+          }
+        ]
+      }
+    ]
+  }
+]

@@ -17,5 +17,5 @@ var options = {
   }
 }
  
-    reporter.generate(options)
+reporter.generate(options)
     

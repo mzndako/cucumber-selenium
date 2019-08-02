@@ -1,21 +1,26 @@
-const selector = require('../selectors/pa-request')
+const selector = require('./selectors/pa-request')
 
 const pa_request = {
+  // Visit the website
   go: async function (page) {
     await this.visit(page.indexOf('/') > -1 ? page : selector[page])
   },
   clickRequestLink: async function() {
     await this.click(selector['PA Request Button'])
   },
+  // Perform a click action on an element
   click: async function(location) {
     await this.click(selector[location])
   },
+  // Perform a click action on an element query using xpath
   clickButtonXpath: async function(location) {
     await this.click(`//button[contains(text(), '${location}')]`)
   },
+  // Confirm that an element is visible
   visible: async function(location) {
     await this.querySelector(selector[location])
   },
+  // Enter/Fill in a value into an element
   fillIn: async function(location, value) {
     await this.queryAndFill(selector[location], value)
   },
@@ -25,6 +30,7 @@ const pa_request = {
   textVisible: async function(text) {
     await this.queryXpath(`//*[contains(text(),'${text}')]`)
   },
+  // Perform login using the email, password and requestType
   login: async function(email, password, requestType) {
     await this.queryAndFill(selector.email, email)
     await this.queryAndFill(selector.password, password)

@@ -17,7 +17,7 @@ const chrome = require('selenium-webdriver/chrome')
 
 
 
-const rootURL = 'https://staging.compliancedepartment.online'
+const rootURL = 'http://localhost.online'
 const waitUntilTime = 15000
 
 var Browser = function () {
@@ -25,7 +25,7 @@ var Browser = function () {
   this.openBrowser = function() {
     let option = new chrome.Options()
     // option.addArguments('start-fullscreen')
-    option.addArguments('--headless')
+    // option.addArguments('--headless')
     option.addArguments('--no-sandbox')
     option.addArguments('--disable-dev-shm-usage')
     
