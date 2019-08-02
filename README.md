@@ -9,5 +9,9 @@ npm install
 npm run test
 ```
 
+## Pipeline Setup
+
+Deploy to a repository e.g gitlab and run the pipeline using the `.gitlab.yml` file setup.
+
 ## Dependencies
 - Google Chrome
